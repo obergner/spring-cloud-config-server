@@ -1,4 +1,4 @@
-package wm.de.platform.boot.services.config;
+package com.obergner.platform.boot.services.config;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
