@@ -1,0 +1,12 @@
+---
+applications:
+- name: spring-cloud-config-server
+  # Fork of https://github.com/cloudfoundry/java-buildpack
+  # For stability, keep your own fork.
+  buildpack: https://github.com/gratiartis/java-buildpack
+  memory: 512M
+  instances: 1
+  # Because the URL will be http://super-mini.cfapps.io/
+  host: spring-cloud-config-server
+  #domain: cfapps.io
+  path: target/spring-cloud-config-server-1.0.0-SNAPSHOT.jar
