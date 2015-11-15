@@ -8,26 +8,7 @@
               value="/var/log/wm-config-server/wm-config-server.log"/>
     <include resource="org/springframework/boot/logging/logback/file-appender.xml"/>
 
-    <property name="JSON_FILE"
-              value="/var/log/wm-config-server/wm-config-server.json"/>
-    <appender name="JSON"
-              class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>INFO</level>
-        </filter>
-        <file>${JSON_FILE}</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${JSON_FILE}.%d{yyyy-MM-dd}</fileNamePattern>
-            <maxHistory>30</maxHistory>
-        </rollingPolicy>
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
-            <customFields>{"service":"${project.artifactId}","buildinfo":{"version":"${project.version}"}}
-            </customFields>
-        </encoder>
-    </appender>
-
     <root level="INFO">
         <appender-ref ref="FILE"/>
-        <appender-ref ref="JSON"/>
     </root>
 </configuration>

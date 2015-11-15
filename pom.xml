@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.2.RELEASE</version>
+        <version>1.2.7.RELEASE</version>
         <relativePath/>
         <!-- lookup parent from repository -->
     </parent>
@@ -49,8 +49,7 @@
         -->
         <dep.mockwebserver.version>2.3.0</dep.mockwebserver.version>
         <dep.redline-rpm.version>1.2.1</dep.redline-rpm.version>
-        <dep.spring-cloud.version>1.0.1.RELEASE</dep.spring-cloud.version>
-        <dep.logstash-logback-encoder.version>4.2</dep.logstash-logback-encoder.version>
+        <dep.spring-cloud.version>1.0.2.RELEASE</dep.spring-cloud.version>
         <!--
             Plugin versions
         -->
@@ -73,11 +72,6 @@
                 <version>${dep.spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>net.logstash.logback</groupId>
-                <artifactId>logstash-logback-encoder</artifactId>
-                <version>${dep.logstash-logback-encoder.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.squareup.okhttp</groupId>
